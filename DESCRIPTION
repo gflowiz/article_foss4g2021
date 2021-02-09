@@ -10,3 +10,6 @@ License: {{ License }}
 LazyData: true
 Encoding: UTF-8
 VignetteBuilder: knitr
+Suggests: 
+    knitr,
+    rmarkdown

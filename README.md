@@ -1,25 +1,9 @@
 
-# enquete.gflowiz
+# Arabesque: a geographic flow visualization application
 
-<!-- badges: start -->
-<!-- badges: end -->
+Proposal for an academic paper at [FOSS4G 2021](https://2021.foss4g.org).
 
-The goal of enquete.gflowiz is to ...
+[Academic Call for paper](https://2021.foss4g.org/call-for-papers/academic.html)
 
-## Installation
 
-You can install the released version of enquete.gflowiz from [CRAN](https://CRAN.R-project.org) with:
-
-``` r
-install.packages("enquete.gflowiz")
-```
-
-## Example
-
-This is a basic example which shows you how to solve a common problem:
-
-``` r
-library(enquete.gflowiz)
-## basic example code
-```
 
