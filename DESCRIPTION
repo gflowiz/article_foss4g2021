@@ -1,0 +1,12 @@
+Package: enquete.gflowiz
+Title: Survey analysis on the needs and expectations of a geoweb application for (geo)visualization of origin-destination flow data 
+Version: 0.0.0.9000
+Authors@R: c(
+  person("Nicolas", "Roelandt", email = "nicolas.roelandt@univ-eiffel.fr", role = c("aut", "cre"), comment = c(ORCID = "0000-0001-9698-4275")),
+  person(given = "gflowiz", role = "cph")
+ )
+Description: Contains the analysis of the online survey conducted in 2018 to collect the possible needs and expectations of a geoweb application for the analysis and the (geo)visualization of origin-destination flow data. </br>This survey made prior Arabesque app development.
+License: {{ License }}
+LazyData: true
+Encoding: UTF-8
+VignetteBuilder: knitr
