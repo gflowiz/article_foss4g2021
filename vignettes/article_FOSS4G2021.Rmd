@@ -5,12 +5,72 @@ vignette: >
   %\VignetteIndexEntry{article_FOSS4G2021}
   %\VignetteEngine{knitr::rmarkdown}
   %\VignetteEncoding{UTF-8}
+author:
+- name: Nicolas Roelandt
+  affiliation: Univ. Gustave Eiffel/AME
+- name: Françoise Bahoken
+  affiliation: Univ. Gustave Eiffel/AME
+- name: Grégoire Le Campion
+  affiliation: CNRS/UMR Passages
+- name: Laurent Jégou
+  affiliation: Univ. Toulouse 2 Jean Jaurès/UMR LISST
 ---
 
 ```{r, include = FALSE}
 knitr::opts_chunk$set(
   collapse = TRUE,
-  comment = "#>"
+  comment = "#>",
+  echo = FALSE,
+  warning = FALSE
 )
 ```
+
+<!--
+Notes:
+# Reminders:
+- abstract due date : 08/03/2021
+- informations: https://2021.foss4g.org/call-for-papers/academic.html
+- 20 min presentation, 5 min question, 5 minutes room change : 30 minutes slots
+
+- topics: Open Geospatial Software, Open GIScience
+- FOSS4G 2019 presentation: https://media.ccc.de/v/bucharest-205-gflowiz-an-open-science-framework-to-analyze-and-geovisualize-networks-and-flow-datasets
+- SAGEO 2019 proceedings: https://sageo2019.inrae.fr/actes/
+- FOSDEM demo : https://archive.fosdem.org/2020/schedule/event/arabesque_a_geographic_flow_visualization_application/
+
+-->
+
+# Keywords
+
+origin-destination matrix, hyper matrix, multiplex graph, geoweb, flow mapping.
+
+# Abstract fr
+
+Le projet gflowiz (geographic flow visualisation) est une
+collaboration interdisciplinaire réalisée dans l’objectif
+de concevoir et développer Arabesque, une nouvelle
+application web dédiée à la géo visualisation de données
+de flux et de réseaux spatiaux.
+Cette proposition présente différentes possibilités
+d’actions sur les informations géographiques,
+statistiques et cartographiques.
+
+Les spécifications d'Arabesque ont été rédigées après analyse d'un corpus de plus de 70 applications permettant la visualisation de données de flux et réseaux spatiaux ainsi que les usages et les attentes de 200 répondants à un sondage. Ces résultats ont été présentés à l'occasion du FOSS4G 2019^[https://media.ccc.de/v/bucharest-205-gflowiz-an-open-science-framework-to-analyze-and-geovisualize-networks-and-flow-datasets].
+
+L'analyse de ce corpus d'applications a montré que ces applications permettent généralement de visualiser et cartographier des flux ou des réseaux mais ne permettent pas d'effectuer des opérations statistiques sur les données.
+Les fonctionnalités dédiées à la cartographie et à la sémiologie graphique des flux sont souvent pauvres.
+
+Arabesque en revanche propose une application web qui se 
+veut dédiée à la visualisation et à l'analyse de flux.
+Des fonctionnalités graphiques avancées sont disponibles, que ce soit  pour les nœuds ou les liens.
+
+Arabesque dispose de fonctionnalités de filtrage (numérique, catégoriel, temporel, spatial) avec la 
+possibilité de définir ces propres filtres en plus de ceux proposés automatiquement.
+
+Une première version de l'application, accessible en ligne^[http://arabesque.ifsttar.fr/], a été dévoilée au 
+colloque SAGEO 2019^[https://sageo2019.inrae.fr/actes/].
+
+Les développements sont en cours pour stabiliser
+l'application, favoriser sa maintenance et permettre
+l'ajout des fonctionnalités manquantes de la première version.
+
 
