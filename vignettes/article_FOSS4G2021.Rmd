@@ -8,12 +8,14 @@ vignette: >
 author:
 - name: Nicolas Roelandt
   affiliation: Univ. Gustave Eiffel/AME
+- name: Etienne Côme
+  affiliation: Univ. Gustave Eiffel/AME
+- name: Laurent Jégou
+  affiliation: Univ. Toulouse 2 Jean Jaurès/UMR LISST
 - name: Françoise Bahoken
   affiliation: Univ. Gustave Eiffel/AME
 - name: Grégoire Le Campion
   affiliation: CNRS/UMR Passages
-- name: Laurent Jégou
-  affiliation: Univ. Toulouse 2 Jean Jaurès/UMR LISST
 ---
 
 ```{r, include = FALSE}
@@ -54,7 +56,7 @@ Cette proposition présente différentes possibilités
 d’actions sur les informations géographiques,
 statistiques et cartographiques.
 
-Les spécifications d'Arabesque ont été rédigées après analyse d'un corpus de plus de 70 applications permettant la visualisation de données de flux et réseaux spatiaux ainsi que les usages et les attentes de 200 répondants à un sondage. Ces résultats ont été présentés à l'occasion du FOSS4G 2019^[https://media.ccc.de/v/bucharest-205-gflowiz-an-open-science-framework-to-analyze-and-geovisualize-networks-and-flow-datasets].
+Les spécifications d'Arabesque ont été rédigées après analyse d'un corpus de plus de 80 applications permettant la visualisation de données de flux et réseaux spatiaux ainsi que les usages et les attentes de 200 répondants à un sondage. Ces résultats ont été présentés à l'occasion du FOSS4G 2019^[https://media.ccc.de/v/bucharest-205-gflowiz-an-open-science-framework-to-analyze-and-geovisualize-networks-and-flow-datasets].
 
 L'analyse de ce corpus d'applications a montré que ces applications permettent généralement de visualiser et cartographier des flux ou des réseaux mais ne permettent pas d'effectuer des opérations statistiques sur les données.
 Les fonctionnalités dédiées à la cartographie et à la sémiologie graphique des flux sont souvent pauvres.
