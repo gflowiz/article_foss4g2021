@@ -9,7 +9,7 @@ author:
 - name: Nicolas Roelandt
   affiliation: Univ. Gustave Eiffel/AME
 - name: Etienne Côme
-  affiliation: Univ. Gustave Eiffel/AME
+  affiliation: Univ. Gustave Eiffel/GRETTIA
 - name: Laurent Jégou
   affiliation: Univ. Toulouse 2 Jean Jaurès/UMR LISST
 - name: Françoise Bahoken
