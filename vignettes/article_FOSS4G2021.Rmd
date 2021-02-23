@@ -72,7 +72,8 @@ Une première version de l'application, accessible en ligne^[http://arabesque.if
 colloque SAGEO 2019^[https://sageo2019.inrae.fr/actes/].
 
 Les développements sont en cours pour stabiliser
-l'application, favoriser sa maintenance et permettre
+l'application, favoriser sa maintenance future et permettre
 l'ajout des fonctionnalités manquantes de la première version.
 
-
+L'objectif de ce papier est de montrer les capacités actuelles de l'application Arabesque et quelles fonctionnalités celle-ci apporte pour l'analyse de données de flux et leur cartographie.
+Enfin, un aperçu des prochains développements sera fait.
