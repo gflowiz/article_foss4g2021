@@ -47,14 +47,15 @@ developed in the framework of the IFSTTAR-funded research project _geographic fl
 in collaboration with CNRS.
 
 It allows both the exploration and filtering of OD data and their representation, with a strong emphasis on geographic
-information layering and flow semiology. The objective is to propose a way to product a modern cartography
-(a geovisualisation) easily thematic flow maps (e.g. bilateral flow volume, for example),
+information layering and features's semiology. The key-objective is to propose an easily way to product a modern cartography
+(a geovisualisation) of thematic flows (e.g. bilateral flow volume, for example),
 at several geographic scales, even from your own datasets.
 
 ([arabesque](http://arabesque.ifsttar.fr/) allows flow mapping from a web browser with Mozilla or Chrome.
 Its development is based on current technological possibilities, in particular adapted web visualisation
-
 and mapping libraries (openlayers, d3, OSM, Turf, NaturalEarthData). 
+
+A presentation on xxxx data will be carried out during the conference.
 
 # Keywords :
 
