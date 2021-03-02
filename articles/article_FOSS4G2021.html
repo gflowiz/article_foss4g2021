@@ -5,13 +5,13 @@
 <meta charset="utf-8">
 <meta http-equiv="X-UA-Compatible" content="IE=edge">
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
-<title>Arabesque: a geographic flow visualization application • enquete.gflowiz</title>
+<title>Arabesque: a web-based thematic flow mapping application • enquete.gflowiz</title>
 <!-- jquery --><script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.4.1/jquery.min.js" integrity="sha256-CSXorXvZcTkaix6Yvo6HppcZGetbYMGWSFlBw8HfCJo=" crossorigin="anonymous"></script><!-- Bootstrap --><link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/twitter-bootstrap/3.4.1/css/bootstrap.min.css" integrity="sha256-bZLfwXAP04zRMK2BjiO8iu9pf4FbLqX6zitd+tIvLhE=" crossorigin="anonymous">
 <script src="https://cdnjs.cloudflare.com/ajax/libs/twitter-bootstrap/3.4.1/js/bootstrap.min.js" integrity="sha256-nuL8/2cJ5NDSSwnKD8VqreErSWHtnEP9E7AySL+1ev4=" crossorigin="anonymous"></script><!-- bootstrap-toc --><link rel="stylesheet" href="../bootstrap-toc.css">
 <script src="../bootstrap-toc.js"></script><!-- Font Awesome icons --><link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.12.1/css/all.min.css" integrity="sha256-mmgLkCYLUQbXn0B1SRqzHar6dCnv9oZFPEC1g1cwlkk=" crossorigin="anonymous">
 <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.12.1/css/v4-shims.min.css" integrity="sha256-wZjR52fzng1pJHwx4aV2AO3yyTOXrcDW7jBpJtTwVxw=" crossorigin="anonymous">
 <!-- clipboard.js --><script src="https://cdnjs.cloudflare.com/ajax/libs/clipboard.js/2.0.6/clipboard.min.js" integrity="sha256-inc5kl9MA1hkeYUt+EC3BhlIgyp/2jDIyBLS6k3UxPI=" crossorigin="anonymous"></script><!-- headroom.js --><script src="https://cdnjs.cloudflare.com/ajax/libs/headroom/0.11.0/headroom.min.js" integrity="sha256-AsUX4SJE1+yuDu5+mAVzJbuYNPHj/WroHuZ8Ir/CkE0=" crossorigin="anonymous"></script><script src="https://cdnjs.cloudflare.com/ajax/libs/headroom/0.11.0/jQuery.headroom.min.js" integrity="sha256-ZX/yNShbjqsohH1k95liqY9Gd8uOiE1S4vZc+9KQ1K4=" crossorigin="anonymous"></script><!-- pkgdown --><link href="../pkgdown.css" rel="stylesheet">
-<script src="../pkgdown.js"></script><meta property="og:title" content="Arabesque: a geographic flow visualization application">
+<script src="../pkgdown.js"></script><meta property="og:title" content="Arabesque: a web-based thematic flow mapping application">
 <meta property="og:description" content="enquete.gflowiz">
 <!-- mathjax --><script src="https://cdnjs.cloudflare.com/ajax/libs/mathjax/2.7.5/MathJax.js" integrity="sha256-nvJJv9wWKEm88qvoQl9ekL2J+k/RWIsaSScxxlsrv8k=" crossorigin="anonymous"></script><script src="https://cdnjs.cloudflare.com/ajax/libs/mathjax/2.7.5/config/TeX-AMS-MML_HTMLorMML.js" integrity="sha256-84DKXVJXs0/F8OTMzX4UR909+jtl4G7SPypPavF+GfA=" crossorigin="anonymous"></script><!--[if lt IE 9]>
 <script src="https://oss.maxcdn.com/html5shiv/3.7.3/html5shiv.min.js"></script>
@@ -54,7 +54,7 @@
   </a>
   <ul class="dropdown-menu" role="menu">
 <li>
-      <a href="../articles/article_FOSS4G2021.html">Arabesque: a geographic flow visualization application</a>
+      <a href="../articles/article_FOSS4G2021.html">Arabesque: a web-based thematic flow mapping application</a>
     </li>
   </ul>
 </li>
@@ -72,18 +72,21 @@
       </header><script src="article_FOSS4G2021_files/accessible-code-block-0.0.1/empty-anchor.js"></script><div class="row">
   <div class="col-md-9 contents">
     <div class="page-header toc-ignore">
-      <h1 data-toc-skip>Arabesque: a geographic flow visualization application</h1>
-                        <h4 class="author">Nicolas Roelandt</h4>
+      <h1 data-toc-skip>Arabesque: a web-based thematic flow mapping application</h1>
+                        <h4 class="author">Étienne Côme</h4>
             <address class="author_afil">
-      Univ. Gustave Eiffel/AME<br><h4 class="author">Françoise Bahoken</h4>
+      Univ. Gustave Eiffel<br><h4 class="author">Françoise Bahoken</h4>
             <address class="author_afil">
-      Univ. Gustave Eiffel/AME<br><h4 class="author">Grégoire Le Campion</h4>
+      Univ. Gustave Eiffel/AME<br><h4 class="author">Nicolas Roelandt</h4>
             <address class="author_afil">
-      CNRS/UMR Passages<br><h4 class="author">Laurent Jégou</h4>
+      Univ. Gustave Eiffel/AME<br><h4 class="author">Laurent Jégou</h4>
             <address class="author_afil">
-      Univ. Toulouse 2 Jean Jaurès/UMR LISST<br><div class="hidden name"><code>article_FOSS4G2021.Rmd</code></div>
+      Univ. Toulouse 2 Jean Jaurès/UMR LISST<br><h4 class="author">Grégoire Le Campion</h4>
+            <address class="author_afil">
+      CNRS/UMR Passages<br><div class="hidden name"><code>article_FOSS4G2021.Rmd</code></div>
 
     </address>
+</address>
 </address>
 </address>
 </address>
@@ -103,29 +106,112 @@ Notes:
 - SAGEO 2019 proceedings: https://sageo2019.inrae.fr/actes/
 - FOSDEM demo : https://archive.fosdem.org/2020/schedule/event/arabesque_a_geographic_flow_visualization_application/
 
+<!--
+Notes:
 -->
+<p>combien de signes (mots) pour le proceeding ? –&gt; Faut-il écrire en français ou en anglais ? –&gt; est-on limité par le nombre d’images ou d’illustrations ? –&gt; ce serait bien de préparer un exemple sur des jeux données. On prend lequel ?</p>
+<div id="abstract-eng" class="section level1">
+<h1 class="hasAnchor">
+<a href="#abstract-eng" class="anchor"></a>Abstract (ENG)</h1>
+<p>Arabesque is an application for the exploration and geovisualisation of origin-destination flows (or spatial networks), developed in the framework of the IFSTTAR-funded research project <em>geographic flow visualisation (gflowiz)</em>, in collaboration with CNRS.</p>
+<p>It allows both the exploration and filtering of OD data and their representation, with a strong emphasis on geographic information layering and flow semiology. The objective is to propose a way to product a modern cartography (a geovisualisation) easily thematic flow maps (e.g. bilateral flow volume, for example), at several geographic scales, even from your own datasets.</p>
+<p>(<a href="http://arabesque.ifsttar.fr/">arabesque</a> allows flow mapping from a web browser with Mozilla or Chrome. Its development is based on current technological possibilities, in particular adapted web visualisation and mapping libraries (openlayers, d3, OSM, Turf, NaturalEarthData).</p>
+</div>
 <div id="keywords" class="section level1">
 <h1 class="hasAnchor">
 <a href="#keywords" class="anchor"></a>Keywords</h1>
-<p>origin-destination matrix, hyper matrix, multiplex graph, geoweb, flow mapping.</p>
+<p>origin-destination matrix, hyper matrix, spatial network, geoweb, flowmap, flow mapping.</p>
 </div>
 <div id="abstract-fr" class="section level1">
 <h1 class="hasAnchor">
-<a href="#abstract-fr" class="anchor"></a>Abstract fr</h1>
-<p>Le projet gflowiz (geographic flow visualisation) est une collaboration interdisciplinaire réalisée dans l’objectif de concevoir et développer Arabesque, une nouvelle application web dédiée à la géo visualisation de données de flux et de réseaux spatiaux. Cette proposition présente différentes possibilités d’actions sur les informations géographiques, statistiques et cartographiques.</p>
-<p>Les spécifications d’Arabesque ont été rédigées après analyse d’un corpus de plus de 70 applications permettant la visualisation de données de flux et réseaux spatiaux ainsi que les usages et les attentes de 200 répondants à un sondage. Ces résultats ont été présentés à l’occasion du FOSS4G 2019<a href="#fn1" class="footnote-ref" id="fnref1"><sup>1</sup></a>.</p>
-<p>L’analyse de ce corpus d’applications a montré que ces applications permettent généralement de visualiser et cartographier des flux ou des réseaux mais ne permettent pas d’effectuer des opérations statistiques sur les données. Les fonctionnalités dédiées à la cartographie et à la sémiologie graphique des flux sont souvent pauvres.</p>
-<p>Arabesque en revanche propose une application web qui se veut dédiée à la visualisation et à l’analyse de flux. Des fonctionnalités graphiques avancées sont disponibles, que ce soit pour les nœuds ou les liens.</p>
+<a href="#abstract-fr" class="anchor"></a>Abstract (fr)</h1>
+<p>Arabesque est une application d’exploration et de géovisualisation de flux origine-destination (ou de réseaux spatiaux), développée dans le cadre du projet de recherche geographic flow visualisation (gflowiz) financé par l’IFSTTAR, en collaboration avec le CNRS.</p>
+<p>Elle permet à la fois l’exploration et le filtrage des données numériques que leur spatialisation, en accordant une importante à l’information géographique, à la sémiologie des flux et au rendu général. L’objectif étant de proposer la réalisation d’une cartographie moderne (une géovisualisation) et thématiques de flux (ex. volume bilatéral de flux, par exemple), à différentes échelles, y compris à partir de son propre jeu de données.</p>
+<p>(<a href="http://arabesque.ifsttar.fr/">arabesque</a> permet de réaliser des cartes thématiques de flux depuis un navigateur web équipé de Mozilla ou de Chrome. Son développement s’appuie sur les technologiques actuelles, particulièrement sur les bibliothèques de visualisation et de cartographie web adaptées (openlayers, d3, OSM, Turf, NaturalEarthData).</p>
+</div>
+<div id="mots-clés" class="section level1">
+<h1 class="hasAnchor">
+<a href="#mots-cl%C3%A9s" class="anchor"></a>Mots-clés</h1>
+<p>matrice origine-destination, matrice complexe, réseau spatial, geoweb, carte de flux, cartographie de flux.</p>
+</div>
+<div id="partie-papier-academic-proceeeding" class="section level1">
+<h1 class="hasAnchor">
+<a href="#partie-papier-academic-proceeeding" class="anchor"></a>Partie PAPIER / ACADEMIC PROCEEEDING</h1>
+<div id="introduction" class="section level2">
+<h2 class="hasAnchor">
+<a href="#introduction" class="anchor"></a>Introduction</h2>
+<p>bla bla bla</p>
+</div>
+<div id="partie-1--contexte---etat-de-lart" class="section level2">
+<h2 class="hasAnchor">
+<a href="#partie-1--contexte---etat-de-lart" class="anchor"></a>Partie 1. Contexte - Etat de l’art</h2>
+<div id="etat-de-lart-de-la-geoviz-des-flux-et-réseaux" class="section level3">
+<h3 class="hasAnchor">
+<a href="#etat-de-lart-de-la-geoviz-des-flux-et-r%C3%A9seaux" class="anchor"></a>Etat de l’art de la geoviz des flux et réseaux</h3>
+<p>Tobler (1979), The Flowmapper</p>
+</div>
+<div id="analyse-de-notre-corpus-dapplication" class="section level3">
+<h3 class="hasAnchor">
+<a href="#analyse-de-notre-corpus-dapplication" class="anchor"></a>Analyse de notre corpus d’application</h3>
+<p>Les spécifications d’arabesque ont été rédigées après la constitution d’un d’un corpus de près de 80 applications permettant la visualisation de données de flux et réseaux spatiaux. Ces applications sont accessibles à partir d’un tableau de bord (Le Campion, Nguyen, 2019) proposant xxxxxx.</p>
+<p>Une première analyse réalisée sur ce corpus (Bahoken et al., 2020) a mise en évidence trois grandes familles d’applications : i)xxxxxx ii) xxxxx et iii) xxxxx.</p>
+<p>==&gt; Regarder si les applications présentent à la fois de l’analyse des données et des éléments de carto sémio. pour enrichir la carte. Quelle est leur part ?</p>
+<p>Une enquête avait également menée en 2018 et 2019 sur les usages et les attentes de ce type d’application cartographique (Roelandt et. al, 2020). Les réponses apportée par les près de 200 répondants ont fait l’objet d’une première présentation lors du FOSS4G 2019<a href="#fn1" class="footnote-ref" id="fnref1"><sup>1</sup></a>.</p>
+<p>L’analyse du corpus d’applications collectées montre leur caractère “mono usage” et témoigne d’une déconnexion entre la représentation des flux en elle-même et les traitements réalisés en amont. Si ces derniers sont effectués en dehors de la cartographie proprement dite, ne pas en tenir compte est préjudiciable à l’image finale.</p>
+<p>En effet, la majorité des applications recensées est limitée à la visualisation directe de flux, sans considérations des informations disponibles en amont de la représentations, qu’elles soient statistiques ou géographiques. Alors qu’en cartographie statistique générale, il est admis que les outils de représentation (magrit, Khartis, etc.) proposent de discrétiser les données statistiques selon plusieurs méthodes ; de reprojeter les fonds de carte, voire d’en transformer l’implantation spatiale (par le passage d’entités aréales à des entités ponctuelles pour la réalisation de cartes lissées dans magrit, par exemple), rien de tel ou d’équivalent n’est proposé pour les données de flux, sauf dans de rares cas particulier (dans flowmap.blue, par exemple)</p>
+<p>Et pourtant, des traitements statistiques ou géographiques de base sont nécessaires pour enrichir la carte. C’est le cas, par exemple, des propositions de décompositions des matrices de flux observées, souvent asymétriques, pour en représenter le volume, le solde bilatéral ou encore l’asymétrie de flux, correspondant respectivemet au “fondement du système d’échanges” ou à son “xxxxx” (Bertin, 1973 ; Tobler, 1979, 1982). De même qu’il est possible d’introduire quelques éléments devant permettre de prendre en compte la géographie des échanges, au niveau du rendu par la mise à disposition de couches d’informations permettant de contextualiser les échanges représentés et/ou lors du filtrage des données de flux par l’espace, c’est-dire selon une acception de la distance parcourue (kilométrique) ou de l’éloignement des OD par exemple.</p>
+<p>De plus, les fonctionnalités dédiées à la cartographie (choix et variété des figurés, actions sur leur géométrie, action sur leur symbologie) et à la sémiologie graphique des flux sont souvent réduites au minimun, à savoir au tracé d’un symbole linéaire (tracé d’un lien ou d’une flèche). Les aspects sémiologiques, pourtant essentiels dans la transmission du message cartographié sont dans bien des cas éludés ou réduits.</p>
+<p>L’intérêt même de la cartographie statistique (dite thématique) de flux, qui résulte de l’articulation d’informations numériques et géographiques, toutes deux préparées en amont dans l’optique d’une représentation sensée (doté de sens et non limitée au seul affichage de couches d’information), ne semble pas pris en compte. Il en résulte une certaine pauvreté des images, au sens où elles sont limitées à une cartographie directe ; aussi à une forme d’homogénéité. C’est pourquoi arabesque se propose d’y remédier en réintroduisant les paradigmes de la cartographie (Mac Eachren, xxx)</p>
+</div>
+</div>
+<div id="partie-2--présentation-de-arabesque" class="section level2">
+<h2 class="hasAnchor">
+<a href="#partie-2--pr%C3%A9sentation-de-arabesque" class="anchor"></a>Partie 2. Présentation de Arabesque</h2>
+<p>Cette proposition présente différentes possibilités d’actions sur les informations géographiques, statistiques et les aspects cartographiques résultent de leur croisement.</p>
+<div id="fonctionnement-général" class="section level3">
+<h3 class="hasAnchor">
+<a href="#fonctionnement-g%C3%A9n%C3%A9ral" class="anchor"></a>2.1. Fonctionnement général</h3>
+<p>3 panneaux etc.</p>
+<p><a href="http://arabesque.ifsttar.fr/">Arabesque</a> est application web qui se veut dédiée à la visualisation et à l’analyse de flux.</p>
+<p>Des fonctionnalités graphiques avancées sont disponibles, que ce soit pour les nœuds ou les liens.</p>
 <p>Arabesque dispose de fonctionnalités de filtrage (numérique, catégoriel, temporel, spatial) avec la possibilité de définir ces propres filtres en plus de ceux proposés automatiquement.</p>
-<p>Une première version de l’application, accessible en ligne<a href="#fn2" class="footnote-ref" id="fnref2"><sup>2</sup></a>, a été dévoilée au colloque SAGEO 2019<a href="#fn3" class="footnote-ref" id="fnref3"><sup>3</sup></a>.</p>
-<p>Les développements sont en cours pour stabiliser l’application, favoriser sa maintenance et permettre l’ajout des fonctionnalités manquantes de la première version.</p>
+</div>
+<div id="fonctionnement-particulier" class="section level3">
+<h3 class="hasAnchor">
+<a href="#fonctionnement-particulier" class="anchor"></a>2.2. Fonctionnement particulier</h3>
+</div>
+<div id="technologies" class="section level3">
+<h3 class="hasAnchor">
+<a href="#technologies" class="anchor"></a>2.3. Technologies</h3>
+</div>
+</div>
+<div id="partie-3--exemple-danalyse-cartographique" class="section level2">
+<h2 class="hasAnchor">
+<a href="#partie-3--exemple-danalyse-cartographique" class="anchor"></a>Partie 3. Exemple d’analyse cartographique</h2>
+</div>
+<div id="conclusion" class="section level2">
+<h2 class="hasAnchor">
+<a href="#conclusion" class="anchor"></a>Conclusion</h2>
+<p>Les développements actuellement en cours consistent à refactoriser le code initial, suivant présentent un double objectif : stabiliser l’application dans sa construction et dans son fonctionnement et sa maintenance ; préparer une seconde version par l’ajour de fonctionnalités complémentaires ou identifiées comme manquantes.</p>
+<p><strong>Fundings / financements</strong> : arabesque est développé dans le cade du projet <a href="https://geoflowiz.hypotheses.org/"><em>geographic flow visualisations (gflowiz)</em></a> une collaboration interdisciplinaire initiée pour concevoir et développer une nouvelle application web dédiée à la géo visualisation thématique de données de flux et de réseaux spatiaux.</p>
+</div>
+<div id="references" class="section level2">
+<h2 class="hasAnchor">
+<a href="#references" class="anchor"></a>References</h2>
+<p>Bahoken F., Le Campion G., Maisonobe M., Jégou L., Côme É. (2020), « Typologie d’un geoweb des flux et réseaux / Typology of a flow and network geoweb », Géomatica Journal: URL : <a href="https://cdnsciencepub.com/doi/abs/10.1139/geomat-2020-0007" class="uri">https://cdnsciencepub.com/doi/abs/10.1139/geomat-2020-0007</a> ; DOI : 10.1139/geomat-2020-0007.</p>
+<p>Le Campion G., Nguyen A. (2019) Dashboard for exploring web applications of geographic flow and movements (DBgFlowiz), IFSTTAR, AME-SPLOTT / COSYS-GRETTIA, and CNRS-UMR Passages. (Accéder)</p>
+<p>Jacques Bertin (1973), les diagrammes, les réseaux, les cartes.</p>
+<p>Côme E., Bapaume T., Jégou L., Bahoken F., Maisonobe M., Roelandt N., Le Campion G. (2019), Arabesque, application d’exploration et de géovisualisation de données de flux et de réseaux, in: Actes de la conférence internationale de géomatique (SAGEO’2019), Session stockages et flux, Clermont-Ferrand, 13-15 novembre 2019, pp. 265-264. Actes_Sageo2019.</p>
+<p>Mac Eachren A.,</p>
+<p>Tobler, W. R. (1979), A geographical flow mapping program, Geographical Analysis, n°13, Vol. 1, pp. 1-20.</p>
+<p>Tobler W. R. (1982), Cartographic study of movement tables, Presentation in the National Computer, Graphic Assembly – session on Statistical Graphics – Mapping, Anaheim, 17-06-1982.</p>
+<p>Roelandt N., Bahoken F., Jégou L., Côme É., Le Campion G. (2020), arabesque : a geographic flow visualization application, FOSDEM’20, Bruxelles [FOSDEM’20 : Session Géospatial Devroom]</p>
+</div>
 </div>
 <div class="footnotes">
 <hr>
 <ol>
 <li id="fn1"><p><a href="https://media.ccc.de/v/bucharest-205-gflowiz-an-open-science-framework-to-analyze-and-geovisualize-networks-and-flow-datasets" class="uri">https://media.ccc.de/v/bucharest-205-gflowiz-an-open-science-framework-to-analyze-and-geovisualize-networks-and-flow-datasets</a><a href="#fnref1" class="footnote-back">↩︎</a></p></li>
-<li id="fn2"><p><a href="http://arabesque.ifsttar.fr/" class="uri">http://arabesque.ifsttar.fr/</a><a href="#fnref2" class="footnote-back">↩︎</a></p></li>
-<li id="fn3"><p><a href="https://sageo2019.inrae.fr/actes/" class="uri">https://sageo2019.inrae.fr/actes/</a><a href="#fnref3" class="footnote-back">↩︎</a></p></li>
 </ol>
 </div>
   </div>
