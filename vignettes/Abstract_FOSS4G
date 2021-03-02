@@ -1,0 +1,80 @@
+---
+title: "Arabesque: a web-based thematic flow mapping application"
+output: rmarkdown::html_vignette
+vignette: >
+  %\VignetteIndexEntry{article_FOSS4G2021}
+  %\VignetteEngine{knitr::rmarkdown}
+  %\VignetteEncoding{UTF-8}
+author:
+- name: Étienne Côme
+  affiliation: Univ. Gustave Eiffel
+- name: Françoise Bahoken
+  affiliation: Univ. Gustave Eiffel/AME
+- name: Nicolas Roelandt
+  affiliation: Univ. Gustave Eiffel/AME
+- name: Laurent Jégou
+  affiliation: Univ. Toulouse 2 Jean Jaurès/UMR LISST
+- name: Grégoire Le Campion
+  affiliation: CNRS/UMR Passages
+  
+  
+---
+
+```{r, include = FALSE}
+knitr::opts_chunk$set(
+  collapse = TRUE,
+  comment = "#>",
+  echo = FALSE,
+  warning = FALSE
+)
+```
+
+<!--
+Notes:
+# Reminders:
+- abstract due date : 08/03/2021
+- informations: https://2021.foss4g.org/call-for-papers/academic.html
+- 20 min presentation, 5 min question, 5 minutes room change : 30 minutes slots
+- topics: Open Geospatial Software, Open GIScience
+- FOSS4G 2019 presentation: https://media.ccc.de/v/bucharest-205-gflowiz-an-open-science-framework-to-analyze-and-geovisualize-networks-and-flow-datasets
+- SAGEO 2019 proceedings: https://sageo2019.inrae.fr/actes/
+- FOSDEM demo : https://archive.fosdem.org/2020/schedule/event/arabesque_a_geographic_flow_visualization_application/
+
+# Abstract (ENG)
+
+Arabesque is an application for the exploration and geovisualisation of origin-destination flows (or spatial networks),
+developed in the framework of the IFSTTAR-funded research project _geographic flow visualisation (gflowiz)_,
+in collaboration with CNRS.
+
+It allows both the exploration and filtering of OD data and their representation, with a strong emphasis on geographic
+information layering and flow semiology. The objective is to propose a way to product a modern cartography
+(a geovisualisation) easily thematic flow maps (e.g. bilateral flow volume, for example),
+at several geographic scales, even from your own datasets.
+
+([arabesque](http://arabesque.ifsttar.fr/) allows flow mapping from a web browser with Mozilla or Chrome.
+Its development is based on current technological possibilities, in particular adapted web visualisation
+
+and mapping libraries (openlayers, d3, OSM, Turf, NaturalEarthData). 
+
+# Keywords :
+
+origin-destination matrix, hyper matrix, spatial network, geoweb, flowmap, flow mapping.
+
+# Abstract (FR)
+
+Arabesque est une application d’exploration et de géovisualisation de flux origine-destination (ou de réseaux spatiaux),
+développée dans le cadre du projet de recherche geographic flow visualisation (gflowiz) financé par l'IFSTTAR, 
+en collaboration avec le CNRS.
+
+Elle permet à la fois l'exploration et le filtrage des données numériques que leur spatialisation,
+en accordant une importante à l'information géographique, à la sémiologie des flux et au rendu général.
+L'objectif étant de proposer la réalisation d'une cartographie moderne (une géovisualisation) et thématiques
+de flux (ex. volume bilatéral de flux, par exemple), à différentes échelles, y compris à partir de son propre jeu de données.
+
+([arabesque](http://arabesque.ifsttar.fr/) permet de réaliser des cartes thématiques de flux depuis un navigateur web
+équipé de Mozilla ou de Chrome. Son développement s’appuie sur les technologiques actuelles, particulièrement sur les
+bibliothèques de visualisation et de cartographie web adaptées (openlayers, d3, OSM, Turf, NaturalEarthData). 
+
+# Mots-clés: 
+
+matrice origine-destination, matrice complexe, réseau spatial, geoweb, carte de flux, cartographie de flux.
