@@ -51,7 +51,8 @@ at several geographic scales, even from your own datasets.
 Its development is based on current technological possibilities, in particular adapted web visualisation
 and mapping libraries (openlayers, d3, OSM, Turf, NaturalEarthData). 
 
-A presentation on xxxx data will be carried out during the conference.
+A demonstration will be carried out during the conference. An analysis of _arabesque_ flowmapping functionalities
+compared with a selection of comparable cartographic web applications will be proposed on the same dataset.
 
 # Keywords :
 
