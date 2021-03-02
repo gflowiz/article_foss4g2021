@@ -6,14 +6,10 @@ vignette: >
   %\VignetteEngine{knitr::rmarkdown}
   %\VignetteEncoding{UTF-8}
 author:
-- name: Étienne Côme
-  affiliation: Univ. Gustave Eiffel
-- name: Françoise Bahoken
-  affiliation: Univ. Gustave Eiffel/AME
 - name: Nicolas Roelandt
   affiliation: Univ. Gustave Eiffel/AME
-- name: Laurent Jégou
-  affiliation: Univ. Toulouse 2 Jean Jaurès/UMR LISST
+- name: Françoise Bahoken
+  affiliation: Univ. Gustave Eiffel/AME
 - name: Grégoire Le Campion
   affiliation: CNRS/UMR Passages
   
