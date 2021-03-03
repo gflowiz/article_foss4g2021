@@ -13,8 +13,9 @@ author:
 - name: Grégoire Le Campion
   affiliation: CNRS/UMR Passages
 - name: Laurent Jégou
-  affiliation: Univ. Toulouse Jean Jaurès / UMR Lisst-Cieu
-  
+  affiliation: Univ. Toulouse Jean Jaurès/UMR Lisst-Cieu
+- name: Marion Maisonobe
+  affiliation: CNRS/UMR Géographie-cités
   
 ---
 
@@ -46,17 +47,15 @@ developed within the framework of the Univ. Gustave Eiffel (ex.IFSTTAR)-funded r
 [geoflowiz](https://geoflowiz.hypotheses.org/), in collaboration with the CNRS.
 
 It allows both the exploration and the filtering of OD data and their representation, with a strong emphasis on geographic
-information layering and features's semiology. The key-objective is to propose an easily way to produce a modern cartography
-(a geovisualisation) of thematic flows (e.g. bilateral flow volume, for example), at several geographic scales, even from your own datasets.
+information layering and features's semiology. The key-objective is to propose an easy way to produce a modern cartography
+(a geovisualisation) of thematic flows (e.g. bilateral flow volume), at several geographic scales, even from your own datasets.
 
-[arabesque](http://arabesque.ifsttar.fr/) allows flow mapping from a modern web browser like Mozilla or Chrome.
+[Arabesque](http://arabesque.ifsttar.fr/) allows flow mapping from a modern web browser like Mozilla or Chrome.
 Its development is based on current technologies, in particular data and adapted web visualisation
 and mapping libraries (OpenLayers, d3, TurfJS, OpenStreetMap, NaturalEarthData). 
 
 A demonstration of _Arabesque_ will be offered during the conference.
-The analysis of its functionalities will be compared with those of similar
-web applications (open source, etc.) which will be compared on the same flow dataset,
-for a practical and empirical "validation" of its contributions.
+The analysis of its functionalities will be compared with those of similar web applications—_Magrit_, _Kepler.gl_, _flowmap.blue_, _Tableau_, _Carto.db_ and _Flourish_—which will be compared on the same flow dataset, for a practical and empirical "validation" of its contributions.
 
 # Keywords :
 
@@ -69,19 +68,18 @@ développée dans le cadre du projet de recherche geographic _flow visualisation
 [geoflowiz](https://geoflowiz.hypotheses.org/), financé par l'Université Gustave Eiffel (ex- IFSTTAR), 
 en collaboration avec le CNRS.
 
-Elle permet à la fois l'exploration et le filtrage des données numériques que leur spatialisation,
-en accordant une importante à l'information géographique, à la sémiologie des flux et au rendu général.
-L'objectif étant de proposer la réalisation d'une cartographie moderne (une géovisualisation) et thématique
-de flux (ex. volume bilatéral de flux, par exemple), à différentes échelles, y compris à partir de son propre jeu de données.
+Elle permet à la fois l'exploration et le filtrage des données numériques et leur spatialisation,
+en accordant une importance à l'information géographique, à la sémiologie des flux et au rendu général.
+L'objectif est de proposer la réalisation d'une cartographie moderne (une géovisualisation) et thématique
+de flux (volume bilatéral de flux, par exemple), à différentes échelles, y compris à partir de son propre jeu de données.
 
-[arabesque](http://arabesque.ifsttar.fr/) permet de réaliser des cartes thématiques de flux depuis un navigateur web moderne tel que Mozilla ou Chrome.
+[Arabesque](http://arabesque.ifsttar.fr/) permet de réaliser des cartes thématiques de flux depuis un navigateur web moderne tel que Mozilla ou Chrome.
 Son développement s’appuie sur les technologiques actuelles, particulièrement sur les données et bibliothèques de visualisation et
 de cartographie web adaptées (OpenLayers, d3, TurfJS, OpenStreetMap NaturalEarthData). 
 
 Une démonstration sera proposée lors de la conférence. L'analyse de ses fonctionnalités
-sera comparée à celles de web applications similaires (open source, etc.) ; toutes seront
-confrontées sur un même jeu de données pour une "validation" pratique et empirique de ses
-apports.
+sera comparée à celles de web applications similaires—_Magrit_, _Kepler.gl_, _flowmap.blue_, _Tableau_, _Carto.db_ and _Flourish_. Toutes seront
+confrontées sur un même jeu de données pour une "validation" pratique et empirique de ses apports.
 
 # Mots-clés: 
 
