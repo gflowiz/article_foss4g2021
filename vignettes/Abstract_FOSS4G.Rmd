@@ -42,17 +42,16 @@ Notes:
 # Abstract (ENG)
 
 Arabesque is an application for the exploration and geovisualisation of origin-destination flows (or spatial networks),
-developed in the framework of the IFSTTAR-funded research project _geographic flow visualisation (gflowiz)_,
-in collaboration with CNRS.
+developed within the framework of the IFSTTAR-funded research project _geographic flow visualisation (gflowiz)_,
+in collaboration with the CNRS.
 
-It allows both the exploration and filtering of OD data and their representation, with a strong emphasis on geographic
-information layering and features's semiology. The key-objective is to propose an easily way to product a modern cartography
-(a geovisualisation) of thematic flows (e.g. bilateral flow volume, for example),
-at several geographic scales, even from your own datasets.
+It allows both the exploration and the filtering of OD data and their representation, with a strong emphasis on geographic
+information layering and features's semiology. The key-objective is to propose an easily way to produce a modern cartography
+(a geovisualisation) of thematic flows (e.g. bilateral flow volume, for example), at several geographic scales, even from your own datasets.
 
 ([arabesque](http://arabesque.ifsttar.fr/) allows flow mapping from a web browser with Mozilla or Chrome.
-Its development is based on current technological possibilities, in particular adapted web visualisation
-and mapping libraries (openlayers, d3, OSM, Turf, NaturalEarthData). 
+Its development is based on current technologies, in particular data and adapted web visualisation
+and mapping libraries (OpenLayers, d3, OSM, TurfJS, NaturalEarthData). 
 
 A demonstration will be carried out during the conference. An analysis of _arabesque_ flowmapping functionalities
 compared with a selection of comparable cartographic web applications will be proposed on the same dataset.
@@ -69,12 +68,12 @@ en collaboration avec le CNRS.
 
 Elle permet à la fois l'exploration et le filtrage des données numériques que leur spatialisation,
 en accordant une importante à l'information géographique, à la sémiologie des flux et au rendu général.
-L'objectif étant de proposer la réalisation d'une cartographie moderne (une géovisualisation) et thématiques
+L'objectif étant de proposer la réalisation d'une cartographie moderne (une géovisualisation) et thématique
 de flux (ex. volume bilatéral de flux, par exemple), à différentes échelles, y compris à partir de son propre jeu de données.
 
-([arabesque](http://arabesque.ifsttar.fr/) permet de réaliser des cartes thématiques de flux depuis un navigateur web
-équipé de Mozilla ou de Chrome. Son développement s’appuie sur les technologiques actuelles, particulièrement sur les
-bibliothèques de visualisation et de cartographie web adaptées (openlayers, d3, OSM, Turf, NaturalEarthData). 
+([arabesque](http://arabesque.ifsttar.fr/) permet de réaliser des cartes thématiques de flux depuis un navigateur web Mozilla ou Chrome.
+Son développement s’appuie sur les technologiques actuelles, particulièrement sur les données et bibliothèques de visualisation et
+de cartographie web adaptées (OpenLayers, d3, OSM, TurfJS, NaturalEarthData). 
 
 # Mots-clés: 
 
