@@ -35,6 +35,7 @@ Notes:
 - FOSS4G 2019 presentation: https://media.ccc.de/v/bucharest-205-gflowiz-an-open-science-framework-to-analyze-and-geovisualize-networks-and-flow-datasets
 - SAGEO 2019 proceedings: https://sageo2019.inrae.fr/actes/
 - FOSDEM demo : https://archive.fosdem.org/2020/schedule/event/arabesque_a_geographic_flow_visualization_application/
+-->
 
 # Abstract (ENG)
 
