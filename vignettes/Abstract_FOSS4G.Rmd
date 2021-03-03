@@ -12,6 +12,8 @@ author:
   affiliation: Univ. Gustave Eiffel/AME
 - name: Grégoire Le Campion
   affiliation: CNRS/UMR Passages
+- name: Laurent Jégou
+  affiliation: Univ. Toulouse Jean Jaurès / UMR Lisst-Cieu
   
   
 ---
