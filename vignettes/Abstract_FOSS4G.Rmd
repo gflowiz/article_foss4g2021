@@ -60,6 +60,13 @@ The analysis of its functionalities will be compared with those of similar web a
 
 origin-destination matrix, complex matrix, spatial network, geoweb, flowmap, flow mapping.
 
+# Description (ENG)
+<!-- This is where you extend the abstract. This is where you may add bibliography or information that can help your audience get into context. Please write between 20 and 500 words. -->
+
+- FOSS4G 2019 presentation: https://media.ccc.de/v/bucharest-205-gflowiz-an-open-science-framework-to-analyze-and-geovisualize-networks-and-flow-datasets
+- SAGEO 2019 proceedings: https://sageo2019.inrae.fr/actes/
+- FOSDEM demo : https://archive.fosdem.org/2020/schedule/event/arabesque_a_geographic_flow_visualization_application/
+
 # Abstract (FR)
 
 Arabesque est une application d’exploration et de géovisualisation de flux origine-destination (ou de réseaux spatiaux),
@@ -74,7 +81,7 @@ de flux (volume bilatéral de flux, par exemple), à différentes échelles, y c
 
 [Arabesque](http://arabesque.ifsttar.fr/) permet de réaliser des cartes thématiques de flux depuis un navigateur web moderne tel que Mozilla ou Chrome.
 Son développement s’appuie sur les technologiques actuelles, particulièrement sur les données et bibliothèques de visualisation et
-de cartographie web adaptées (OpenLayers, d3, TurfJS, OpenStreetMap NaturalEarthData). 
+de cartographie web adaptées (OpenLayers, d3, TurfJS, OpenStreetMap, NaturalEarthData). 
 
 Une démonstration sera proposée lors de la conférence. L'analyse de ses fonctionnalités
 sera comparée à celles de web applications similaires—_Magrit_, _Kepler.gl_, _flowmap.blue_, _Tableau_, _Carto.db_ and _Flourish_. Toutes seront
@@ -83,3 +90,12 @@ confrontées sur un même jeu de données pour une "validation" pratique et empi
 # Mots-clés: 
 
 matrice origine-destination, matrice complexe, réseau spatial, geoweb, carte de flux, cartographie de flux.
+
+# Description (fr)
+<!-- Vous pouvez étendre l'abstract dans cette partie. Vous pouvez ajouter ici votre bibliographie ou tout autre information qui peut aider l'audience à comprendre le contexte.
+Merci d'écrire entre 20 et 500 mots. -->
+
+
+Enregistrement de la présentation du projet GFlowiz au FOSS4G 2019 : https://media.ccc.de/v/bucharest-205-gflowiz-an-open-science-framework-to-analyze-and-geovisualize-networks-and-flow-datasets
+- proceedings de SAGEO 2019: https://sageo2019.inrae.fr/actes/
+- Démonstration au FOSDEM: https://archive.fosdem.org/2020/schedule/event/arabesque_a_geographic_flow_visualization_application/
