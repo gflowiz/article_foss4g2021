@@ -2,6 +2,7 @@ pandoc: 2.7.3
 pkgdown: 1.6.1
 pkgdown_sha: ~
 articles:
+  Abstract_FOSS4G: Abstract_FOSS4G.html
   article_FOSS4G2021: article_FOSS4G2021.html
-last_built: 2021-03-02T16:14Z
+last_built: 2021-03-03T08:39Z
 
