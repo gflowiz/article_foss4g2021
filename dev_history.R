@@ -36,3 +36,6 @@ devtools::build_vignettes()
 usethis::use_pkgdown()
 usethis::use_github_action("pkgdown")
 usethis::use_build_ignore("_pkgdown.yml")
+
+# build website locally
+pkgdown::build_articles()
