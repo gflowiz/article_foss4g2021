@@ -63,9 +63,15 @@ origin-destination matrix, complex matrix, spatial network, geoweb, flowmap, flo
 # Description (ENG)
 <!-- This is where you extend the abstract. This is where you may add bibliography or information that can help your audience get into context. Please write between 20 and 500 words. -->
 
-- FOSS4G 2019 presentation: https://media.ccc.de/v/bucharest-205-gflowiz-an-open-science-framework-to-analyze-and-geovisualize-networks-and-flow-datasets
-- SAGEO 2019 proceedings: https://sageo2019.inrae.fr/actes/
-- FOSDEM demo : https://archive.fosdem.org/2020/schedule/event/arabesque_a_geographic_flow_visualization_application/
+Arabesque is a free software released under BSD 2-Clause License, its source code is available on [GitHub)(https://github.com/gflowiz/arabesque).
+
+The Gflowiz project and some screenshots of Arabesque have been presented at the [FOSS4G 2019](https://media.ccc.de/v/bucharest-205-gflowiz-an-open-science-framework-to-analyze-and-geovisualize-networks-and-flow-datasets)
+
+You can find a paper on the academic approach of Arabesque in the [SAGEO 2019 proceedings (pages 265 to 274, *in French*)]( https://sageo2019.inrae.fr/actes/)
+
+A [live demonstration](https://archive.fosdem.org/2020/schedule/event/arabesque_a_geographic_flow_visualization_application/) of Arabesque has been recorded at FOSDEM 2020.
+
+
 
 # Abstract (FR)
 
