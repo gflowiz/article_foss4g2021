@@ -63,7 +63,7 @@ origin-destination matrix, complex matrix, spatial network, geoweb, flowmap, flo
 # Description (ENG)
 <!-- This is where you extend the abstract. This is where you may add bibliography or information that can help your audience get into context. Please write between 20 and 500 words. -->
 
-Arabesque is a free software released under BSD 2-Clause License, its source code is available on [GitHub)(https://github.com/gflowiz/arabesque).
+Arabesque is a free software released under BSD 2-Clause License, its source code is available on [GitHub](https://github.com/gflowiz/arabesque).
 
 The Gflowiz project and some screenshots of Arabesque have been presented at the [FOSS4G 2019](https://media.ccc.de/v/bucharest-205-gflowiz-an-open-science-framework-to-analyze-and-geovisualize-networks-and-flow-datasets)
 
