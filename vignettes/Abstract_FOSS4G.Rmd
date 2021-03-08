@@ -1,5 +1,5 @@
 ---
-title: "Arabesque: a web-based thematic flow mapping application"
+title: "Abstract: One Arabesque in the small world of OD webmaps"
 output: rmarkdown::html_vignette
 vignette: >
   %\VignetteIndexEntry{article_FOSS4G2021}
