@@ -27,7 +27,8 @@ filtered_data <- data %>%
                 "REGETUD", # Studying region
                 "ILETUD", # indicator o
                 "METRODOM", # useful to filter Metropolitan France and DROMs
-                "IPONDI", # Weight variable
+                "IPONDI",# Weight variable
+                "SEXE", # SEXE
                 "CSM", # 	socio-professional category
                 )
 unlink(temp)
