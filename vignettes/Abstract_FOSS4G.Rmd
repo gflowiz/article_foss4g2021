@@ -71,8 +71,6 @@ You can find a paper on the academic approach of Arabesque in the [SAGEO 2019 pr
 
 A [live demonstration](https://archive.fosdem.org/2020/schedule/event/arabesque_a_geographic_flow_visualization_application/) of Arabesque has been recorded at FOSDEM 2020.
 
-
-
 # Abstract (FR)
 
 Arabesque est une application d’exploration et de géovisualisation de flux origine-destination (ou de réseaux spatiaux),
@@ -87,7 +85,8 @@ de flux (volume bilatéral de flux, par exemple), à différentes échelles, y c
 
 [Arabesque](http://arabesque.ifsttar.fr/) permet de réaliser des cartes thématiques de flux depuis un navigateur web moderne tel que Mozilla ou Chrome.
 Son développement s’appuie sur les technologiques actuelles, particulièrement sur les données et bibliothèques de visualisation et
-de cartographie web adaptées (OpenLayers, d3, TurfJS, OpenStreetMap, NaturalEarthData). 
+de cartographie web adaptées (OpenLayers, d3, TurfJS, OpenStreetMap NaturalEarthData). 
+
 
 Une démonstration sera proposée lors de la conférence. L'analyse de ses fonctionnalités
 sera comparée à celles de web applications similaires—_Magrit_, _Kepler.gl_, _flowmap.blue_, _Tableau_, _Carto.db_ and _Flourish_. Toutes seront
@@ -108,3 +107,4 @@ Le projet Gflowiz et des captures d'écran d'Arabesque ont été présentés au 
 Un papier détaillant l'approche académique d'Arabesque est disponible dans les [proceedings de SAGEO 2019 (pages 265 to 274, *en français*)]( https://sageo2019.inrae.fr/actes/)
 
 Une [démonstration](https://archive.fosdem.org/2020/schedule/event/arabesque_a_geographic_flow_visualization_application/) d'Arabesque a été enregistrée au FOSDEM 2020.
+
