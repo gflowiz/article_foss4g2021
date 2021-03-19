@@ -21,8 +21,8 @@ data <- vroom::vroom(archive::archive_read(temp, file), delim = ";")
 filtered_data <- data %>%
   dplyr::filter(!ILETUD %in% c(1,7)) %>% # remove loops in the same commune or outside France
   dplyr::filter(DIPL %in% c(14:19)) %>% # keep only students
-  dplyr::select("COMMUNE", # living city code -> Origin
-                "DCETUF", # Studying department and commune code -> destination
+  dplyr::select("COMMUNE", # living city code -> **Origin**
+                "DCETUF", # Studying department and commune code -> **Destination**
                 "REGION", # Living Region
                 "REGETUD", # Studying region
                 "ILETUD", # indicator o
@@ -40,4 +40,20 @@ filtered_data %>% filter(COMMUNE == DCETUF) %>% count()
 filtered_data %>% dplyr::filter(DCETUF == 99999) %>% dplyr::count()
 
 # Export
+# Raw data
 filtered_data %>% readr::write_csv(file = here::here("data", "OD_filtered_data.csv"))
+
+# Weighted data
+filtered_data %>%
+  group_by(COMMUNE,
+           DCETUF,
+           CSM,
+           SEXE,
+           REGION,
+           REGETUD,
+           METRODOM,
+           ILETUD) %>%
+  summarise(flow = sum(IPONDI),
+            count = n()) %>%
+  readr::write_csv(file = here::here("data", "OD_weighted_data.csv"))
+
