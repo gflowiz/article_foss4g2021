@@ -1,5 +1,5 @@
 ---
-title: "Arabesque: a web-based thematic flow mapping application"
+title: "Abstract: One Arabesque in the small world of OD webmaps"
 output: rmarkdown::html_vignette
 vignette: >
   %\VignetteIndexEntry{article_FOSS4G2021}
@@ -60,6 +60,17 @@ The analysis of its functionalities will be compared with those of similar web a
 
 origin-destination matrix, complex matrix, spatial network, geoweb, flowmap, flow mapping.
 
+# Description (ENG)
+<!-- This is where you extend the abstract. This is where you may add bibliography or information that can help your audience get into context. Please write between 20 and 500 words. -->
+
+Arabesque is a free software released under BSD 2-Clause License, its source code is available on [GitHub](https://github.com/gflowiz/arabesque).
+
+The Gflowiz project and some screenshots of Arabesque have been presented at the [FOSS4G 2019](https://media.ccc.de/v/bucharest-205-gflowiz-an-open-science-framework-to-analyze-and-geovisualize-networks-and-flow-datasets)
+
+You can find a paper on the academic approach of Arabesque in the [SAGEO 2019 proceedings (pages 265 to 274, *in French*)]( https://sageo2019.inrae.fr/actes/)
+
+A [live demonstration](https://archive.fosdem.org/2020/schedule/event/arabesque_a_geographic_flow_visualization_application/) of Arabesque has been recorded at FOSDEM 2020.
+
 # Abstract (FR)
 
 Arabesque est une application d’exploration et de géovisualisation de flux origine-destination (ou de réseaux spatiaux),
@@ -76,6 +87,7 @@ de flux (volume bilatéral de flux, par exemple), à différentes échelles, y c
 Son développement s’appuie sur les technologiques actuelles, particulièrement sur les données et bibliothèques de visualisation et
 de cartographie web adaptées (OpenLayers, d3, TurfJS, OpenStreetMap NaturalEarthData). 
 
+
 Une démonstration sera proposée lors de la conférence. L'analyse de ses fonctionnalités
 sera comparée à celles de web applications similaires—_Magrit_, _Kepler.gl_, _flowmap.blue_, _Tableau_, _Carto.db_ and _Flourish_. Toutes seront
 confrontées sur un même jeu de données pour une "validation" pratique et empirique de ses apports.
@@ -83,3 +95,16 @@ confrontées sur un même jeu de données pour une "validation" pratique et empi
 # Mots-clés: 
 
 matrice origine-destination, matrice complexe, réseau spatial, geoweb, carte de flux, cartographie de flux.
+
+# Description (fr)
+<!-- Vous pouvez étendre l'abstract dans cette partie. Vous pouvez ajouter ici votre bibliographie ou tout autre information qui peut aider l'audience à comprendre le contexte.
+Merci d'écrire entre 20 et 500 mots. -->
+
+Arabesque est un logiciel libre sous licence BSD 2-Clause, son code source est disponible sur [GitHub](https://github.com/gflowiz/arabesque).
+
+Le projet Gflowiz et des captures d'écran d'Arabesque ont été présentés au [FOSS4G 2019](https://media.ccc.de/v/bucharest-205-gflowiz-an-open-science-framework-to-analyze-and-geovisualize-networks-and-flow-datasets)
+
+Un papier détaillant l'approche académique d'Arabesque est disponible dans les [proceedings de SAGEO 2019 (pages 265 to 274, *en français*)]( https://sageo2019.inrae.fr/actes/)
+
+Une [démonstration](https://archive.fosdem.org/2020/schedule/event/arabesque_a_geographic_flow_visualization_application/) d'Arabesque a été enregistrée au FOSDEM 2020.
+
