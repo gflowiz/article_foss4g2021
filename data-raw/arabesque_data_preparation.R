@@ -29,7 +29,7 @@ filtered_data <- data %>%
                 "METRODOM", # useful to filter Metropolitan France and DROMs
                 "IPONDI",# Weight variable
                 "SEXE", # SEXE
-                "CSM", # 	socio-professional category
+                "CSM" # 	socio-professional category
                 )
 unlink(temp)
 
