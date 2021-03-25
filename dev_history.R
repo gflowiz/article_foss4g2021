@@ -7,9 +7,9 @@ library(desc)
 unlink("DESCRIPTION")
 my_desc <- description$new("!new")
 my_desc$set_version("0.0.0.9000")
-my_desc$set(Package = "enquete.gflowiz")
-my_desc$set(Title = "Survey analysis on the needs and expectations of a geoweb application for (geo)visualization of origin-destination flow data ")
-my_desc$set(Description = "Contains the analysis of the online survey conducted in 2018 to collect the possible needs and expectations of a geoweb application for the analysis and the (geo)visualization of origin-destination flow data. </br>This survey made prior Arabesque app development.")
+my_desc$set(Package = "arabesqueFOSS4G2021")
+my_desc$set(Title = "Article prepared for the FOSS4G 2021 comparing Arabesque to other flow map applications in the geoweb")
+my_desc$set(Description = "Contains the article source plus data and code")
 my_desc$set("Authors@R",
             'c(
   person("Nicolas", "Roelandt", email = "nicolas.roelandt@univ-eiffel.fr", role = c("aut", "cre"), comment = c(ORCID = "0000-0001-9698-4275")),
