@@ -5,6 +5,8 @@
 
 library(dplyr)
 library(readr)
+library(dplyr)
+library(sf)
 library(vroom)
 library(here)
 #remotes::install_github("jimhester/archive")
@@ -56,4 +58,33 @@ filtered_data %>%
   summarise(flow = sum(IPONDI),
             count = n()) %>%
   readr::write_csv(file = here::here("data", "OD_weighted_data.csv"))
+
+# Read Weighted data
+OD_weighted_data <- readr::read_csv(
+  file = here::here("data", "OD_weighted_data.csv"),
+  col_types = readr::cols(.default = "c", flow = "d",count = "d"))
+
+# Departement flows Weighted data
+OD_weighted_data %>%
+  dplyr::mutate(
+    CODE_DEP = substr(COMMUNE, 1,2),
+    DEP_ETUD = substr(DCETUF, 1,2)) %>%
+  dplyr::group_by(CODE_DEP, DEP_ETUD, CSM, SEXE, REGION, REGETUD, METRODOM, ILETUD) %>%
+  dplyr::summarise(flow=sum(flow), count = sum(count)) %>%
+  readr::write_csv(file = here::here("data", "OD_departements_weighted_data.csv"))
+
+# EPCI flows Weighted data
+## get EPCI code for each commune
+communes <- sf::read_sf(
+  here::here("data-raw/COMMUNE_CARTO.shp"))  %>%
+  sf::st_drop_geometry() %>%
+  dplyr::select(INSEE_COM, CODE_EPCI)
+
+OD_weighted_data %>% dplyr::left_join(communes, by =  c("COMMUNE" = "INSEE_COM")) %>%
+  dplyr::rename(EPCI_ORIGIN = CODE_EPCI) %>%
+  dplyr::left_join(communes, by =  c("DCETUF" = "INSEE_COM")) %>%
+  dplyr::rename(EPCI_DEST = CODE_EPCI) %>%
+  dplyr::group_by(EPCI_ORIGIN, EPCI_DEST, CSM, SEXE, REGION, REGETUD, METRODOM, ILETUD) %>%
+  dplyr::summarise(flow=sum(flow), count = sum(count)) %>%
+  readr::write_csv(file = here::here("data", "OD_epci_weighted_data.csv"))
 

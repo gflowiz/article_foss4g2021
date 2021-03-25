@@ -28,3 +28,28 @@ nodes %>%
 # Export to geojson
 nodes %>%
   sf::st_write(here::here("data", "nodes_coordinates.geojson"))
+
+
+## Prepare geodata for Departements scale
+dep <- arabesqueFOSS4G2021::prepare_nodes(communes, INSEE_DEP)
+
+# Export to CSV
+dep %>%
+  sf::st_drop_geometry() %>%
+  readr::write_csv(file = here::here("data", "departements_nodes_coordinates.csv"))
+
+# Export to geojson
+dep %>%
+  sf::st_write(here::here("data", "departements_nodes_coordinates.geojson"))
+
+## Prepare geodata for EPCI scale
+epci <- arabesqueFOSS4G2021::prepare_nodes(communes, CODE_EPCI)
+
+# Export to CSV
+epci %>%
+  sf::st_drop_geometry() %>%
+  readr::write_csv(file = here::here("data", "epci_nodes_coordinates.csv"))
+
+# Export to geojson
+epci %>%
+  sf::st_write(here::here("data", "epci_nodes_coordinates.geojson"))
