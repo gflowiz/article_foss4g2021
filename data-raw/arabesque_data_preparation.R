@@ -57,3 +57,15 @@ filtered_data %>%
             count = n()) %>%
   readr::write_csv(file = here::here("data", "OD_weighted_data.csv"))
 
+# Weighted data
+OD_weighted_data <- readr::read_csv(
+  file = here::here("data", "OD_weighted_data.csv"),
+  col_types = readr::cols(.default = "c", flow = "d",count = "d"))
+
+OD_weighted_data %>%
+  dplyr::mutate(
+    CODE_DEP = substr(COMMUNE, 1,2),
+    DEP_ETUD = substr(DCETUF, 1,2)) %>%
+  dplyr::group_by(CODE_DEP, DEP_ETUD, CSM, SEXE, REGION, REGETUD, METRODOM, ILETUD) %>%
+  dplyr::summarise(flow=sum(flow), count = sum(count)) %>%
+  readr::write_csv(file = here::here("data", "OD_departements_weighted_data.csv"))
