@@ -39,3 +39,9 @@ usethis::use_build_ignore("_pkgdown.yml")
 
 # build website locally
 pkgdown::build_articles()
+
+# add function prepare_nodes
+usethis::use_package("sf")
+usethis::use_package("dplyr")
+usethis::use_r("prepare_nodes")
+usethis::use_test()

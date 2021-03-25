@@ -28,3 +28,16 @@ nodes %>%
 # Export to geojson
 nodes %>%
   sf::st_write(here::here("data", "nodes_coordinates.geojson"))
+
+
+
+dep <- arabesqueFOSS4G2021::prepare_nodes(communes, "INSEE_DEP")
+dep
+# Export to CSV
+nodes %>%
+  sf::st_drop_geometry() %>%
+  readr::write_csv(file = here::here("data", "departements_nodes_coordinates.csv"))
+
+# Export to geojson
+nodes %>%
+  sf::st_write(here::here("data", "departements_nodes_coordinates.geojson"))
