@@ -810,7 +810,7 @@ Mobsco dataset:
 ADMINEXPRESS dataset:
 
 -   documentation: :
-    https://geoservices.ign.fr/documentation/diffusion/documentation-offre.html\#bases\_vectorielles
+    https://geoservices.ign.fr/documentation/diffusion/telechargement-donnees-libres.html
 
 -   -   file: :
-    ftp://Admin\_Express\_ext:Dahnoh0eigheeFok@[tp3.ign.fr/ADMIN-EXPRESS-COG\_2-0\_\_SHP\_\_FRA\_WGS84G\_2019-09-24.7z.001]{.underline}
+    ftp://Admin\_Express\_ext:Dahnoh0eigheeFok@[tp3.ign.fr/ADMIN-EXPRESS-COG\_2-0\_\_SHP\_\_FRA\_WGS84G\_2019-09-24.7z.001
