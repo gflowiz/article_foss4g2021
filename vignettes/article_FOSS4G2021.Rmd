@@ -1,8 +1,8 @@
 ---
-title: "ONE ARABESQUE IN THE SMALL WORLD OF OD WEBMAPS (pre-print)"
+title: "One Arabesque int the small world of OD webmaps (pre-print)"
 output: rmarkdown::html_vignette
 vignette: >
-  %\VignetteIndexEntry{ONE ARABESQUE IN THE SMALL WORLD OF OD WEBMAPS (pre-print)}
+  %\VignetteIndexEntry{One Arabesque int the small world of OD webmaps (pre-print)}
   %\VignetteEngine{knitr::rmarkdown}
   %\VignetteEncoding{UTF-8}
 author:
@@ -120,7 +120,7 @@ this dividing line is somehow reminiscent and related to the one
 described and analysed by Carmichael and Marron between data science and
 statistics (2018).
 
-# [THE SMALL WORLD OF ORIGIN -- DESTINATION MATRIX MAPPING]{.smallcaps}**
+# The small world of Origin -- Destination matrix mapping
 
 ## The development of online web mapping tools
 
@@ -242,7 +242,7 @@ departments' georeferencing. We limited our analysis to the France
 metropolitan area. The nodes were created by calculating the centroids
 of the departments.
 
-# [BENCHMARKING/ USE TEST]{.smallcaps}
+# Benchmarking/ Use test
 
 In this section, we are testing 4 flowmap geoweb tools for OD flows that
 are interfaced on the web, with the same dataset, in order to compare
