@@ -1,8 +1,8 @@
 ---
-title: "One Arabesque int the small world of OD webmaps (pre-print)"
+title: "One Arabesque in the small world of OD webmaps (pre-print)"
 output: rmarkdown::html_vignette
 vignette: >
-  %\VignetteIndexEntry{One Arabesque int the small world of OD webmaps (pre-print)}
+  %\VignetteIndexEntry{One Arabesque in the small world of OD webmaps (pre-print)}
   %\VignetteEngine{knitr::rmarkdown}
   %\VignetteEncoding{UTF-8}
 author:
