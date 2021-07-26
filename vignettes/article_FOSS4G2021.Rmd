@@ -471,7 +471,7 @@ this synthetic view, we detail in the next paragraphs the main
 differences between the functionalities offered by the tools to perform
 these five main tasks.
 
-![](media/image7.png){width=100%}
+![](diagram_flow_geoweb_vertical.svg){width=100%}
 
 **Figure 7**. Applications workflows diagram.
 
