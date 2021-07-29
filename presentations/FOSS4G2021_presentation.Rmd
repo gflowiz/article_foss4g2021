@@ -6,6 +6,7 @@ author:
 date: '`r Sys.Date()`'
 output:
   xaringan::moon_reader:
+    self_contained: true
     seal: false
     css: ["xaringan-themer.css", "custom.css"]
     nature:
