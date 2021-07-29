@@ -7,6 +7,7 @@
     <meta name="date" content="2021-07-29" />
     <script src="FOSS4G2021_presentation_files/header-attrs/header-attrs.js"></script>
     <link rel="stylesheet" href="xaringan-themer.css" type="text/css" />
+    <link rel="stylesheet" href="custom.css" type="text/css" />
   </head>
   <body>
     <textarea id="source">
@@ -14,29 +15,8 @@
 
 
 
-class: inverse center middle
 
-&lt;style&gt;
-.top_left {
-    left: 0;
-    position: absolute;
-    top: 0;
-}
-.top_left img {
-margin: 0;
-}
-
-.top_right {
-    right: 0;
-    position: absolute;
-    top: 0;
-}
-.top_right img {
-margin: 0;
-}
-&lt;/style&gt;
-
-
+class: inverse center middle title-slide
 
 .top_left[
 &lt;img src="media/logo_FOSS4G2021.svg" width="100%" /&gt;
@@ -127,9 +107,156 @@ layout: true
 # Comparison criteria
 
 ---
+Applications similar to Arabesque :
+  * Web applications
+  * FOSS
+  * OD data visualisation capabilities
 
-toto
+???
+
+Opportunities for action on the data and their representation, export, etc. 
+Types of cartographic rendering
 ---
+layout: false
+class: inverse center middle
+# Data model
+
+---
+layout: true
+# Data model
+---
+
+* data format may varie
+
+--
+* data stockage may varie : wide/large matrix format
+
+--
+* nodes coordinates in WGS84 (lat/lon)
+
+--
+* no cleaning tools provided
+
+???
+Data format: 2 files nodes / links is the most common (all but Kepler.gl).
+Cleaning:
+Your data needs to be prepared ahead using other tools.
+Arabesque provide information on rejected data.
+
+---
+layout: false
+class: inverse center middle
+# Usage
+
+---
+layout: true
+# Usage
+---
+* Data Analysis
+  * Arabesque only
+
+--
+* Exploration
+  * Arabesque
+  * KeplerGL
+  * Flowmap.blue
+
+???
+Only Arabesque offers real data analysis capabilities with custom filtering options and new indicators computation.
+
+---
+
+* Representation
+  * Arabesque
+  * KeplerGL
+  * Flowmap.blue
+  * Magrit
+
+???
+All applications can be used to represent OD data.
+However Kepler.gl and Flowmap.blue offers limited design options (3D arcs).
+Magrit is dedicated to thematic mapping 
+
+---
+layout: false
+class: inverse center middle
+# Public/Purpose
+
+---
+layout: true
+# Public/Purpose
+---
+
+* Data exploration and visualisation
+    * data journalist
+    * general public
+    * web publishing
+    
+* Academia and teaching
+    * thematic maps production
+    * statistical analysis capabilities
+    * Arabesque and Magrit
+
+---
+layout: false
+class: inverse center middle
+# Performance
+
+---
+layout: true
+# Performance
+---
+
+* Technology dependant
+  * KeplerGl and Flowmap.blue
+    * Deck.gl
+    * large datasets
+    * fast
+    * limited graphic options
+  * Arabesque and Magrit
+    * D3
+    * smaller datasets (&lt; 10 000 objects)
+    * more graphic options
+
+---
+layout: false
+class: inverse center middle
+# Interoperability and reproducibility
+
+---
+layout: true
+# Interoperability and reproducibility
+---
+ 
+## data format
+
+  * CSV and/or GeoJSON
+  * 2 separates tables (except for KeplerGL)
+  * for Arabesque, Magrit and Flowmap.blue, you can use the same files
+      * note that for Flowmap.blue you will have to save the CSV file in a google sheet document or copy-paste the data in a browser
+
+---
+## Export
+
+
+  • online hosting (KeplerGL, Flowmap.blue)
+  • image export (Arabesque, Magrit)
+  • Data and project parameters (Arabesque, KeplerGl, Magrit)
+  
+---
+layout: false
+class: inverse center middle
+# Conclusion
+
+---
+layout: true
+# Conclusion
+---  
+# Conclusion
+
+- business culture, user's skills and final use of the map influence the choice of the tool because it will influence the chosen approaches (exploration and/or analysis)
+- data does not influence the choice of the tool
+- whole range of needs and possibilities are covered, for the benefits of the community.
 layout: false
 class: center, middle
 
