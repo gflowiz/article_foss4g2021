@@ -1,0 +1,65 @@
+on:
+  push:
+    branches:
+      - main
+      - master
+      - presentation_FOSS4G2021
+  pull_request:
+    branches:
+      - main
+      - master
+
+jobs:
+  build:
+    runs-on: ubuntu-20.04
+    env:
+      GITHUB_PAT: ${{ secrets.GITHUB_TOKEN }}
+      REPO_NAME: "https://packagemanager.rstudio.com/all/__linux__/focal/latest"
+      FILL_HOME: "FALSE"
+    steps:
+      - name: Checkout repo
+        uses: actions/checkout@v2
+        with:
+          fetch-depth: 0
+
+      - name: Setup R
+        uses: r-lib/actions/setup-r@v1
+
+      - uses: r-lib/actions/setup-pandoc@v1
+
+      - name: Query dependencies
+        run: |
+          install.packages('remotes')
+          saveRDS(remotes::dev_package_deps(dependencies = TRUE), ".github/depends.Rds", version = 2)
+          writeLines(sprintf("R-%i.%i", getRversion()$major, getRversion()$minor), ".github/R-version")
+        shell: Rscript {0}
+
+      - name: Install system dependencies
+        if: runner.os == 'Linux'
+        run: |
+          while read -r cmd
+          do
+            eval sudo $cmd
+          done < <(Rscript -e 'writeLines(remotes::system_requirements("ubuntu", "20.04"))')
+
+      - name: Install packages
+        run: |
+          install.packages("xarigan")
+          install.packages("xaringanthemer")
+        shell: Rscript {0}
+
+      - name: Render Rmarkdown files
+        run: |
+          rmarkdown::render("presentations/FOSS4G2021_presentation.Rmd")
+          file.copy("presentations/FOSS4G2021_presentation.html", ".", recursive = TRUE)
+          writeLines("!*.html\n!*.pdf\n!*_files/", "public/FOSS4G2021/.gitignore")
+        shell: Rscript {0}
+
+      - name: Push to gh-pages
+        uses: s0/git-publish-subdir-action@develop
+        env:
+          REPO: self
+          BRANCH: gh-pages # The branch name where you want to push the assets
+          FOLDER: public/FOSS4G2021 # The directory where your assets are generated
+          GITHUB_TOKEN: ${{ secrets.GITHUB_TOKEN }} # GitHub will automatically add this - you don't need to bother getting a token
+          MESSAGE: "Push presentation: ({sha}) {msg}" # The commit message
