@@ -45,7 +45,7 @@ jobs:
       - name: Install packages
         run: |
           install.packages("rmarkdown")
-          install.packages("xarigan")
+          install.packages("xaringan")
           install.packages("xaringanthemer")
         shell: Rscript {0}
 
