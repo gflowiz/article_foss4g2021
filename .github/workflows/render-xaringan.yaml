@@ -63,6 +63,6 @@ jobs:
         env:
           REPO: self
           BRANCH: gh-pages # The branch name where you want to push the assets
-          FOLDER: public/FOSS4G2021 # The directory where your assets are generated
+          FOLDER: public # The directory where your assets are generated
           GITHUB_TOKEN: ${{ secrets.GITHUB_TOKEN }} # GitHub will automatically add this - you don't need to bother getting a token
           MESSAGE: "Push presentation: ({sha}) {msg}" # The commit message
