@@ -52,7 +52,8 @@ jobs:
       - name: Render Rmarkdown files
         run: |
           rmarkdown::render("presentations/FOSS4G2021_presentation.Rmd")
-          file.copy("presentations/FOSS4G2021_presentation.html", ".", recursive = TRUE)
+          dir.create("public/FOSS4G2021/")
+          file.copy("presentations/FOSS4G2021_presentation.html", "public/FOSS4G2021/presentation.html", recursive = TRUE)
           file.create("public/FOSS4G2021/.gitignore")
           writeLines("!*.html\n!*.pdf\n!*_files/", "public/FOSS4G2021/.gitignore")
         shell: Rscript {0}
