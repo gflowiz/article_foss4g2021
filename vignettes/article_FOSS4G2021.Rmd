@@ -818,6 +818,10 @@ ADMINEXPRESS dataset:
 ```{r render-presentation, echo = FALSE}
 # Code chunk to generate presentation
 # inspired by : https://stackoverflow.com/questions/65893350/add-pkgdown-html-to-site-articles-generated-by-rmarkdownrender
-rmarkdown::render(here::here("presentations/FOSS4G2021_presentation.Rmd"), output_file = here::here("vignettes/FOSS4G2021_presentation.html"))
-message("presentation rendered")
+getwd()
+list.files()
+rmarkdown::render(
+  here::here("presentations/FOSS4G2021_presentation.Rmd"), 
+  output_file = here::here("articles/FOSS4G2021_presentation.html"))
+
 ```
