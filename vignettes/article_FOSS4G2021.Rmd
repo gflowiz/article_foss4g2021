@@ -822,6 +822,6 @@ getwd()
 list.files()
 rmarkdown::render(
   here::here("presentations/FOSS4G2021_presentation.Rmd"), 
-  output_file = here::here("articles/FOSS4G2021_presentation.html"))
+  output_file = here::here("../articles/FOSS4G2021_presentation.html"))
 
 ```
