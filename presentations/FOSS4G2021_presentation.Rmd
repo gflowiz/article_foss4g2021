@@ -1,0 +1,301 @@
+---
+title: "ONE ARABESQUE IN THE SMALL WORLD OF OD WEBMAPS"
+subtitle: "FOSS4G 2021"  
+author: 
+  - "Nicolas Roelandt"
+date: '`r Sys.Date()`'
+output:
+  xaringan::moon_reader:
+    self_contained: true
+    seal: false
+    css: ["xaringan-themer.css", "custom.css"]
+    nature:
+      slideNumberFormat: "%current%"
+      highlightStyle: github
+      highlightLines: true
+      ratio: 16:9
+      countIncrementalSlides: true
+---
+```{r setup, include=FALSE}
+options(htmltools.dir.version = FALSE)
+knitr::opts_chunk$set(
+  fig.width=9, fig.height=3.5, fig.retina=3,
+  out.width = "100%",
+  cache = FALSE,
+  echo = TRUE,
+  message = FALSE, 
+  warning = FALSE,
+  hiline = TRUE
+)
+```
+
+```{r xaringan-themer, include=FALSE, warning=FALSE}
+library(xaringanthemer)
+style_duo_accent(
+  primary_color = "#2f2a85",
+  secondary_color = "#2f2a85",
+  inverse_header_color = "#ef7d00"
+)
+```
+
+class: inverse center middle title-slide
+
+.top_left[
+```{r logo, echo=FALSE, out.width="100%", eval=TRUE}
+knitr::include_graphics("media/logo_FOSS4G2021.svg")
+```
+]
+
+.top_right[
+```{r logo2, echo=FALSE, out.width="100%", eval=TRUE}
+knitr::include_graphics("media/logo_univ_gustave_eiffel_blanc_rvb.svg")
+```
+]
+
+
+# ONE ARABESQUE IN THE SMALL WORLD OF OD WEBMAPS
+
+## <span style='color:#ef7d00;'>_FOSS4G 2021 - remote_</span> 
+
+### Nicolas Roelandt
+---
+
+# Introduction
+
+## Contexte
+
+--
+- Focus on web applications
+
+--
+- Thematic geovisualization and cartographic purposes
+
+--
+- Flows and spatial networks
+
+--
+- Review of existing tools (2016 -)
+
+--
+- Survey within 200 users
+
+--
+- Development of Arabesque (2018 -)
+
+???
+
+The paper focuses on a specific part of geoweb, it relates to flows and spatial networks for thematic geovisualization and cartographic purposes.
+
+Arabesque, after an online survey of people interested in geovisualizing this type of data and a review of existing web pages and applications.
+
+Particularities of flow mapping : pay close attention to the preparation and processing of the OD data before representation, otherwise graphical (e.g. spaghetti effect) and visual complexities will arise.
+
+arabesque positioning: combining OD data visualization and cartography (not also mapping). 
+
+3 key points: dealing with numerical data, geographical data, display.
+
+
+---
+class: inverse center middle
+
+# Why compare ?
+---
+layout: true
+# Why compare ?
+---
+
+- Arabesque V1 available, V2 in dev
+
+--
+- Is it really innovative ?
+
+--
+- Help users to make an informed choice
+
+???
+
+Arabesque is now an usable application, useable by everyone.
+It is not perfect, some features we think important are missing, there is inconvenient bugs.
+So we are working on a version 2.
+
+But is Arabesque really innovative, does it brings something to the community that are not in similare tools ?
+
+So we made this comparison and wrote this paper to help user make an informed choice
+
+
+---
+layout: false
+class: inverse center middle
+# Comparison criteria
+
+---
+layout: true
+# Comparison criteria
+
+---
+Applications similar to Arabesque :
+  * Web applications
+  * FOSS
+  * OD data visualisation capabilities
+
+???
+
+Opportunities for action on the data and their representation, export, etc. 
+Types of cartographic rendering
+---
+layout: false
+class: inverse center middle
+# Data model
+
+---
+layout: true
+# Data model
+---
+
+* data format may varie
+
+--
+* data stockage may varie : wide/large matrix format
+
+--
+* nodes coordinates in WGS84 (lat/lon)
+
+--
+* no cleaning tools provided
+
+???
+Data format: 2 files nodes / links is the most common (all but Kepler.gl).
+Cleaning:
+Your data needs to be prepared ahead using other tools.
+Arabesque provide information on rejected data.
+
+---
+layout: false
+class: inverse center middle
+# Usage
+
+---
+layout: true
+# Usage
+---
+* Data Analysis
+  * Arabesque only
+
+--
+* Exploration
+  * Arabesque
+  * KeplerGL
+  * Flowmap.blue
+
+???
+Only Arabesque offers real data analysis capabilities with custom filtering options and new indicators computation.
+
+---
+
+* Representation
+  * Arabesque
+  * KeplerGL
+  * Flowmap.blue
+  * Magrit
+
+???
+All applications can be used to represent OD data.
+However Kepler.gl and Flowmap.blue offers limited design options (3D arcs).
+Magrit is dedicated to thematic mapping 
+
+---
+layout: false
+class: inverse center middle
+# Public/Purpose
+
+---
+layout: true
+# Public/Purpose
+---
+
+* Data exploration and visualisation
+    * data journalist
+    * general public
+    * web publishing
+    
+* Academia and teaching
+    * thematic maps production
+    * statistical analysis capabilities
+    * Arabesque and Magrit
+
+---
+layout: false
+class: inverse center middle
+# Performance
+
+---
+layout: true
+# Performance
+---
+
+* Technology dependant
+  * KeplerGl and Flowmap.blue
+    * Deck.gl
+    * large datasets
+    * fast
+    * limited graphic options
+  * Arabesque and Magrit
+    * D3
+    * smaller datasets (< 10 000 objects)
+    * more graphic options
+
+---
+layout: false
+class: inverse center middle
+# Interoperability and reproducibility
+
+---
+layout: true
+# Interoperability and reproducibility
+---
+ 
+## data format
+
+  * CSV and/or GeoJSON
+  * 2 separates tables (except for KeplerGL)
+  * for Arabesque, Magrit and Flowmap.blue, you can use the same files
+      * note that for Flowmap.blue you will have to save the CSV file in a google sheet document or copy-paste the data in a browser
+
+---
+## Export
+
+
+  • online hosting (KeplerGL, Flowmap.blue)
+  • image export (Arabesque, Magrit)
+  • Data and project parameters (Arabesque, KeplerGl, Magrit)
+  
+---
+layout: false
+class: inverse center middle
+# Conclusion
+
+---
+layout: true
+# Conclusion
+---  
+# Conclusion
+
+- business culture, user's skills and final use of the map influence the choice of the tool because it will influence the chosen approaches (exploration and/or analysis)
+- data does not influence the choice of the tool
+- whole range of needs and possibilities are covered, for the benefits of the community.
+layout: false
+class: center, middle
+
+# Thanks!
+
+Nicolas Roelandt - Univ. Gustave Eiffel
+
+[nicolas.roelandt@univ-eiffel.fr](mailto:nicolas.roelandt@univ-eiffel.fr) [@RoelandtN42](https://twitter.com/RoelandtN42)
+
+.left[
+
+##### Slides created via the R packages:
+
+- [**xaringan**](https://github.com/yihui/xaringan)<br>
+- [gadenbuie/xaringanthemer](https://github.com/gadenbuie/xaringanthemer)
+]

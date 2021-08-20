@@ -814,3 +814,9 @@ ADMINEXPRESS dataset:
 
 -   -   file: :
     ftp://Admin\_Express\_ext:Dahnoh0eigheeFok@[tp3.ign.fr/ADMIN-EXPRESS-COG\_2-0\_\_SHP\_\_FRA\_WGS84G\_2019-09-24.7z.001
+    
+```{r render-presentation, echo = FALSE}
+# Code chunk to generate presentation
+# inspired by : https://stackoverflow.com/questions/65893350/add-pkgdown-html-to-site-articles-generated-by-rmarkdownrender
+rmarkdown::render(here::here("presentations/FOSS4G2021_presentation.Rmd"), output_file = here::here(I("presentations/FOSS4G2021_presentation")))
+```

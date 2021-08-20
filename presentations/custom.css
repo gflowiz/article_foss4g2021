@@ -1,0 +1,31 @@
+<style>
+.top_left {
+    left: 0;
+    position: absolute;
+    top: 0;
+}
+.top_left img {
+margin: 0;
+}
+
+.top_right {
+    right: 0;
+    position: absolute;
+    top: 0;
+}
+.top_right img {
+margin: 0;
+}
+.remark-slide-content title-slide {
+    padding: 2em 8em 3em 6em;
+}
+
+.remark-slide-content title-slide h1 {
+    font-size: 100px;
+}
+
+
+.remark-slide-content title-slide h2 {
+    font-size: 80px;
+}
+</style>
