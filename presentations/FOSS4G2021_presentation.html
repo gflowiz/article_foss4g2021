@@ -4,7 +4,7 @@
     <title>ONE ARABESQUE IN THE SMALL WORLD OF OD WEBMAPS</title>
     <meta charset="utf-8" />
     <meta name="author" content="Nicolas Roelandt" />
-    <meta name="date" content="2021-07-29" />
+    <meta name="date" content="2021-08-24" />
     <script src="FOSS4G2021_presentation_files/header-attrs/header-attrs.js"></script>
     <link rel="stylesheet" href="xaringan-themer.css" type="text/css" />
     <link rel="stylesheet" href="custom.css" type="text/css" />
@@ -18,34 +18,40 @@
 
 class: inverse center middle title-slide
 
-.top_left[
-&lt;img src="media/logo_FOSS4G2021.svg" width="100%" /&gt;
-]
-
-.top_right[
-&lt;img src="media/logo_univ_gustave_eiffel_blanc_rvb.svg" width="100%" /&gt;
-]
-
-
 # ONE ARABESQUE IN THE SMALL WORLD OF OD WEBMAPS
 
-## &lt;span style='color:#ef7d00;'&gt;_FOSS4G 2021 - remote_&lt;/span&gt; 
+## Nicolas Roelandt
 
-### Nicolas Roelandt
+.bottom[
+### &lt;span style='color:#ef7d00;'&gt;_FOSS4G 2021 - remote_&lt;/span&gt;
+
+&lt;img src="media/logos.svg" width="100%" /&gt;
+]
+
+###### Press &lt;span style='color:#ef7d00;'&gt;P&lt;/span&gt; to access notes
+
 ---
 
 # Introduction
 
-## Contexte
+--
+
+.pull-left[
+- Part of the Gflowiz project
+]
+
+.pull-right[
+&lt;img src="media/logo_gflowiz.jpg" width="60%" /&gt;
+]
 
 --
-- Focus on web applications
+- Focus on **web applications**
 
 --
-- Thematic geovisualization and cartographic purposes
+- Thematic *geovisualization* and cartographic purposes
 
 --
-- Flows and spatial networks
+- **Flows** and spatial networks
 
 --
 - Review of existing tools (2016 -)
@@ -55,6 +61,7 @@ class: inverse center middle title-slide
 
 --
 - Development of Arabesque (2018 -)
+
 
 ???
 
@@ -84,15 +91,15 @@ layout: true
 - Is it really innovative ?
 
 --
-- Help users to make an informed choice
+- Can we help users to make an informed choice ?
 
 ???
 
 Arabesque is now an usable application, useable by everyone.
-It is not perfect, some features we think important are missing, there is inconvenient bugs.
+It is not perfect, some features we think important are missing, there is some inconvenient bugs.
 So we are working on a version 2.
 
-But is Arabesque really innovative, does it brings something to the community that are not in similare tools ?
+But is Arabesque really innovative, does it brings something to the community that are not in similar tools ?
 
 So we made this comparison and wrote this paper to help user make an informed choice
 
@@ -107,15 +114,80 @@ layout: true
 # Comparison criteria
 
 ---
-Applications similar to Arabesque :
+Focus on applications similar to Arabesque :
   * Web applications
   * FOSS
   * OD data visualisation capabilities
+  * comparison on the [same dataset](https://gflowiz.github.io/article_foss4g2021/articles/article_FOSS4G2021.html#the-mobsco-dataset)
+
+--
+
+4 apps:
+- Arabesque
+- Flowmap.blue
+- Kepler.gl
+- Magrit
 
 ???
 
-Opportunities for action on the data and their representation, export, etc. 
-Types of cartographic rendering
+We decided to focus on applications that are similar to Arabesque:
+- Web applications that runs in a web browser (so no desktop application like QGIS and no programmation languages like Python or Javascript)
+- Free and Open Source Software for 2 reasons: Arabesque is FOSS and for reproductibility concerns of the article, we choose to only compare it to software that are accessible
+- The softwares has to be able to visualize Origin-Destination data, a capability often lacking in webmapping tools
+- We used the same subset of the MOBSCO dataset in each application
+
+---
+layout: false
+## Arabesque
+
+.left-column[
+* Developped in 2019, part of the [Gflowiz project](https://geoflowiz.hypotheses.org/)
+* Exploration and geovisualisation of origin-destination flows]
+
+.right-column[
+![](media/image3.png)
+]
+
+???
+Arabesque was developped in 2019 inside the Gflowiz project with the goal to provide a tool dedicated to Exploration and geovisualisation of origin-destination flows and spatial networks.
+Few tools are able to map origin-destination flows and often lacks functionnalities like 
+
+---
+
+## [Flowmap.blue](https://flowmap.blue/)
+
+.left-column[
+* Created in 2019
+* Explore and create flow maps
+]
+
+.right-column[
+![](media/image5.png)
+]
+
+---
+
+## [Kepler.gl](https://kepler.gl/)
+
+.left-column[
+* Launched in 2018
+* Geovisualisation tool designed for complex datasets
+]
+
+.right-column[
+![](media/image4.jpg)
+]
+---
+## [Magrit](http://magrit.cnrs.fr/)
+
+.left-column[
+* 2017 by the RIATE team
+* Thematic cartography software]
+
+.right-column[
+![](media/image6.jpg)
+]
+ 
 ---
 layout: false
 class: inverse center middle
@@ -138,7 +210,16 @@ layout: true
 * no cleaning tools provided
 
 ???
-Data format: 2 files nodes / links is the most common (all but Kepler.gl).
+
+Data format: 
+- 2 files nodes / links is the most common (all but Kepler.gl).
+-  kepler.gl works with a single file with Origin and destination coordinates in 4 columns
+
+Coordinates:
+Coordinates has to be in WGS84 for Arabesque, Kepler.gl and Flowmap.blue
+Magrit accept projected data
+So the data might need to be transformed before hand
+
 Cleaning:
 Your data needs to be prepared ahead using other tools.
 Arabesque provide information on rejected data.
@@ -152,30 +233,36 @@ class: inverse center middle
 layout: true
 # Usage
 ---
+
+* Representation
+
+  * Arabesque
+  * Kepler.gl
+  * Flowmap.blue
+  * Magrit
+  
+--
+
+* Exploration
+
+  * Arabesque
+  * Kepler.gl
+  * Flowmap.blue
+
+--
+
 * Data Analysis
   * Arabesque only
 
---
-* Exploration
-  * Arabesque
-  * KeplerGL
-  * Flowmap.blue
-
 ???
-Only Arabesque offers real data analysis capabilities with custom filtering options and new indicators computation.
 
----
-
-* Representation
-  * Arabesque
-  * KeplerGL
-  * Flowmap.blue
-  * Magrit
-
-???
 All applications can be used to represent OD data.
 However Kepler.gl and Flowmap.blue offers limited design options (3D arcs).
-Magrit is dedicated to thematic mapping 
+kepler.gl and Flowmap.blue provide some exploration functionalities like zooming on a region, popups on hovering or brushing.
+Magrit, on the other hand, is more focused on the production of static maps and does not allow navigation and exploration
+It data analysis  capabilities are limited to a histogramm of the dataset without filtering.
+
+Only Arabesque offers real data analysis capabilities with custom filtering options and new indicators computation.
 
 ---
 layout: false
@@ -188,14 +275,30 @@ layout: true
 ---
 
 * Data exploration and visualisation
-    * data journalist
     * general public
+    * data journalist
     * web publishing
+    * **Kepler.gl** / **Flowmap.blue**
     
 * Academia and teaching
     * thematic maps production
     * statistical analysis capabilities
-    * Arabesque and Magrit
+    * **Arabesque** / **Magrit**
+
+???
+
+Which application to use for which purpose?
+
+Each tool meet specific needs according to the profiles (technical skills, mapping knowledge) and objectives (communication, exploration, mapping) of the different users (geographer, cartographer, GIS specialist, data scientist, data journalist, urban planner, etc.).
+
+We think that for data exploration and visualisation, by the general public or data journalist, kepler.gl or Flowmap.blue are best fitted. They do not require the user to have significant knowledge of cartography and are oriented towards web publishing, allowing quick publication and interactive reading.
+
+
+On the other hand, the representation possibilities are limited to a colored 3D arc.
+
+For the creation of static thematic maps or statistical exploration of data, we recommend using Magrit or Arabesque.
+The representation possibilities are more important, although limited to two dimensions. The result will be more suitable for teaching or publishing scientific articles.
+
 
 ---
 layout: false
@@ -207,22 +310,33 @@ layout: true
 # Performance
 ---
 
-* Technology dependant
-  * KeplerGl and Flowmap.blue
+## Technology dependant
+--
+
+* Kepler.gl and Flowmap.blue
     * Deck.gl
     * large datasets
     * fast
     * limited graphic options
-  * Arabesque and Magrit
+--
+
+* Arabesque and Magrit
     * D3
     * smaller datasets (&lt; 10 000 objects)
     * more graphic options
+
+???
+
+The performance is also very good of Kepler.gl and Flowmap.blue, allowing to visualize large datasets, quickly.
+
+Arabesque and Magrit do not support large datasets under penalty of slowing down or blocking your computer.
+It may therefore be necessary to aggregate the data beforehand.
+
 
 ---
 layout: false
 class: inverse center middle
 # Interoperability and reproducibility
-
 ---
 layout: true
 # Interoperability and reproducibility
@@ -231,19 +345,30 @@ layout: true
 ## data format
 
   * CSV and/or GeoJSON
-  * 2 separates tables (except for KeplerGL)
-  * for Arabesque, Magrit and Flowmap.blue, you can use the same files
-      * note that for Flowmap.blue you will have to save the CSV file in a google sheet document or copy-paste the data in a browser
-
----
-## Export
-
-
-  • online hosting (KeplerGL, Flowmap.blue)
-  • image export (Arabesque, Magrit)
-  • Data and project parameters (Arabesque, KeplerGl, Magrit)
+  * 2 separates tables (except for Kepler.gl)
+  * same files for Arabesque, Magrit &amp; Flowmap.blue
   
+???
+Most applications tested used CSV files as input, some accept geojson.
+Generally they except 2 separates tables
+
+Note that for Flowmap.blue you will have to save the CSV file in a google sheet document or copy-paste the data in a browser
+
 ---
+
+## Export
+* online hosting (Kepler.gl, Flowmap.blue)
+* image export (Arabesque, Magrit)
+* Data and project parameters (Arabesque, Kepler.gl, Magrit)
+
+???
+Kepler.gl and Flowmap.blue propose to the user to host online their production, which is a real asset to diffuse dynamic cartography online.
+
+Arabesque and Magrit are more oriented towards editing cartography and only offer image output formats.
+Arabesque, Kepler.gl and Magrit allow you to export the data and parameters of a project so that a user can share their analysis.
+
+---
+
 layout: false
 class: inverse center middle
 # Conclusion
@@ -251,14 +376,15 @@ class: inverse center middle
 ---
 layout: true
 # Conclusion
----  
-# Conclusion
+---
 
-- business culture, user's skills and final use of the map influence the choice of the tool because it will influence the chosen approaches (exploration and/or analysis)
-- data does not influence the choice of the tool
-- whole range of needs and possibilities are covered, for the benefits of the community.
+- Business culture, user's skills and final use of the map influence the choice of the tool because it will influence the chosen approaches (exploration and/or analysis)
+- Data does not influence the choice of the tool
+- A whole range of needs and possibilities are covered, for the benefits of the community.
+
+---
 layout: false
-class: center, middle
+class: center inverse
 
 # Thanks!
 
@@ -266,12 +392,17 @@ Nicolas Roelandt - Univ. Gustave Eiffel
 
 [nicolas.roelandt@univ-eiffel.fr](mailto:nicolas.roelandt@univ-eiffel.fr) [@RoelandtN42](https://twitter.com/RoelandtN42)
 
-.left[
+Access to Arabesque application : [arabesque.ifsttar.fr](http://arabesque.ifsttar.fr/)
 
-##### Slides created via the R packages:
+Article pre-print version : [gflowiz.github.io/article_foss4g2021](https://gflowiz.github.io/article_foss4g2021/articles/article_FOSS4G2021.html)
 
-- [**xaringan**](https://github.com/yihui/xaringan)&lt;br&gt;
-- [gadenbuie/xaringanthemer](https://github.com/gadenbuie/xaringanthemer)
+.center[
+
+&lt;img src="media/logos.svg" width="100%" /&gt;
+]
+
+.bottom-left[
+##### Slides created via the R packages [xaringan](https://github.com/yihui/xaringan) and  [gadenbuie/xaringanthemer](https://github.com/gadenbuie/xaringanthemer)
 ]
     </textarea>
 <style data-target="print-only">@media screen {.remark-slide-container{display:block;}.remark-slide-scaler{box-shadow:none;}}</style>
